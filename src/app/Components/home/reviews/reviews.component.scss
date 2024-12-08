@@ -1,0 +1,87 @@
+.reviews-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+
+  .reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .arrow-buttons {
+      display: flex;
+      gap: 0.5rem;
+
+      .arrow-button {
+        background: none;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        padding: 0.5rem;
+        cursor: pointer;
+
+        &:hover {
+          background: #f0f0f0;
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+          fill: #333;
+        }
+      }
+    }
+  }
+
+  .review-list {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    
+
+    .review-card {
+      flex-shrink: 0;
+      width: 200px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      .stars {
+        display: flex;
+        margin-bottom: 0.5rem;
+
+        .star-icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .reviewer {
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+
+        .verified {
+          color: green;
+          margin-left: 0.5rem;
+        }
+      }
+
+      .testimonial {
+        font-style: italic;
+        color: #555;
+      }
+    }
+  }
+}

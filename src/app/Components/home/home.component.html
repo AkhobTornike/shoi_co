@@ -1,0 +1,81 @@
+<app-banner></app-banner>
+<app-partners></app-partners>
+
+<div class="container">
+  <!-- NEW ARRIVALS -->
+  <div class="header">
+    <h1>NEW ARRIVALS</h1>
+  </div>
+
+  <div *ngIf="newArrivalsProducts.length > 0" class="new-arrivals">
+    <div *ngFor="let product of newArrivalsProducts" class="product-card">
+      <img [src]="product.frontImage" [alt]="product.name">
+      <h2>{{ product.name }}</h2>
+      <div class="rating">
+        <span *ngFor="let star of getStars(getAssessmentValue(product))">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" style="color: #FFC633;" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
+          </svg>
+        </span>
+        <span class="rating-text">{{ getAssessmentValue(product) }}/5</span>
+      </div>
+      <div class="price">
+        <span class="current-price">
+          ${{ product.isDiscounted ? (product.price * (1 - product.discount / 100)) : product.price }}
+        </span>
+        <span *ngIf="product.isDiscounted" class="original-price">${{ product.price }}</span>
+        <span *ngIf="product.isDiscounted" class="discount">-{{ product.discount }}%</span>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="newArrivalsProducts.length === 0">
+    <p>No products found.</p>
+  </div>
+
+  <div class="view-all">
+    <button>View All</button>
+  </div>
+
+  <!-- TOP SELLINGS -->
+
+  <div class="header">
+    <h1>TOP SELLING</h1>
+  </div>
+
+  <div *ngIf="topSellingsProducts.length > 0" class="new-arrivals">
+    <div *ngFor="let product of topSellingsProducts" class="product-card">
+      <img [src]="product.frontImage" [alt]="product.name">
+      <h2>{{ product.name }}</h2>
+      <div class="rating">
+        <span *ngFor="let star of getStars(getAssessmentValue(product))">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" style="color: #FFC633;" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
+          </svg>
+        </span>
+        <span class="rating-text">{{ getAssessmentValue(product) }}/5</span>
+      </div>
+      <div class="price">
+        <span class="current-price">
+          ${{ product.isDiscounted ? (product.price * (1 - product.discount / 100)) : product.price }}
+        </span>
+        <span *ngIf="product.isDiscounted" class="original-price">${{ product.price }}</span>
+        <span *ngIf="product.isDiscounted" class="discount">-{{ product.discount }}%</span>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="newArrivalsProducts.length === 0">
+    <p>No products found.</p>
+  </div>
+
+    <div class="view-all">
+    <button>View All</button>
+  </div>
+
+  <!-- Broze by dress style -->
+   <app-dress-style></app-dress-style>
+
+   <!-- REVIEW -->
+    <app-reviews></app-reviews>
+</div>

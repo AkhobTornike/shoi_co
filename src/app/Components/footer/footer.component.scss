@@ -1,0 +1,160 @@
+$primary-color: #000000;
+$secondary-color: #f2f0f1;
+$tertiary-color: #f0f0f0;
+$star-color: #ffc633;
+$done-color: #01ab31;
+
+.footer {
+  background: $secondary-color;
+  color: $primary-color;
+  padding: 2rem 1rem;
+
+  .newsletter {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 26rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: $primary-color;
+
+    .title_div{
+        width: 40%;
+        h2 {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+          color: $secondary-color;
+        }
+    }
+
+
+    .form_div {
+        margin: auto;
+        form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 0.75rem;
+    
+          input {
+            padding: 12px;
+            width: 329px;
+            padding-block: 16px;
+            border: none;
+            border-radius: 62px;
+            flex: 1;
+          }
+    
+          button {
+            padding: 0.75rem 1rem;
+            background: $secondary-color;
+            color: $primary-color;
+            width: 349px;
+            height: 48px;
+            border: none;
+            border-radius: 62px;
+            cursor: pointer;
+            flex-shrink: 0;
+    
+            &:hover {
+              background: #ddd;
+            }
+          }
+        }
+    }
+
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .brand {
+      flex: 1;
+      min-width: 250px;
+
+      h3 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 0.5rem;
+
+        a {
+          font-size: 1.25rem;
+          color: $primary-color;
+
+          &:hover {
+            color: #ddd;
+          }
+        }
+      }
+    }
+
+    .links {
+      display: flex;
+      flex: 2;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+
+      h4 {
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        font-size: 1rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 0.5rem;
+
+          a {
+            color: $primary-color;
+            text-decoration: none;
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    p {
+      margin: 0;
+      font-size: 0.875rem;
+    }
+
+    .payment-methods {
+      display: flex;
+      gap: 0.5rem;
+
+      img {
+        height: 25px;
+        object-fit: contain;
+      }
+    }
+  }
+}

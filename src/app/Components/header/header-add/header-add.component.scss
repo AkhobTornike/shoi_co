@@ -1,0 +1,40 @@
+$primary-color: #000000;
+$secondary-color: #f2f0f1;
+$tertiary-color: #f0f0f0;
+$star-color: #ffc633;
+$done-color: #01ab31;
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-color;
+    
+    .main {
+        margin: 0 auto;
+        p {
+            margin-left: 250px;
+        }
+        p, a {
+            color: $secondary-color;
+        }
+    }
+
+    .secondary {
+        margin-left: auto;
+        margin-right: 15px;
+        align-items: end;
+    }
+
+    &.header-add-mobile {
+        .main {
+            p {
+                margin-left: 0;
+            }
+        }
+        .secondary {
+            visibility: hidden;
+        }
+    }
+    
+}

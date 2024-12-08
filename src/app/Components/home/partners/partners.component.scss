@@ -1,0 +1,18 @@
+$primary-color: #000000;
+$secondary-color: #f2f0f1;
+$tertiary-color: #f0f0f0;
+$star-color: #ffc633;
+$done-color: #01ab31;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  background-color: $primary-color;
+
+  p {
+    color: #ffffff;
+  }
+
+}
