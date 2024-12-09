@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit{
 
   checkScreenSize() {
     if (isPlatformBrowser(this.platformId)) {
-      this.isMobileView = window.innerWidth <= 947;
+      this.isMobileView = window.innerWidth <= 950;
     }
   }
 
