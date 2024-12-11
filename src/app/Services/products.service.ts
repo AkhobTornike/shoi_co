@@ -14,5 +14,9 @@ export class ProductsService {
     return (productsData as any).default;
   }
 
+  getProductById(id: number): Product {
+    const products = this.getProducts();
+    return products.find(product => product.id == id)!;
+  }
 
 }

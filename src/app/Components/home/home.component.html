@@ -26,6 +26,7 @@
         <span *ngIf="product.isDiscounted" class="original-price">${{ product.price }}</span>
         <span *ngIf="product.isDiscounted" class="discount">-{{ product.discount }}%</span>
       </div>
+        <a [routerLink]="['product', product.id]" routerLinkActive="router-link-active" ><button>Details</button></a>
     </div>
   </div>
 

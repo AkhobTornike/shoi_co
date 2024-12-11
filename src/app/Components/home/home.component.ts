@@ -9,11 +9,12 @@ import { DressStyleComponent } from "./dress-style/dress-style.component";
 import { ReviewsComponent } from "./reviews/reviews.component";
 import { Review } from '../../Interface/review';
 import { ReviewsService } from '../../Services/reviews.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [BannerComponent, PartnersComponent, CommonModule, DressStyleComponent, ReviewsComponent],
+  imports: [BannerComponent, PartnersComponent, CommonModule, DressStyleComponent, ReviewsComponent, RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -66,6 +67,10 @@ export class HomeComponent implements OnInit {
 
   getStars(rating: number): number[] {
     return Array(Math.round(rating)).fill(0);
+  }
+
+  navigateToProduct(productId: number): void {
+    console.log('Navigating to product with id: ' + productId);
   }
 
 }

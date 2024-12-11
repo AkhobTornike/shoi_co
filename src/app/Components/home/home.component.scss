@@ -52,6 +52,21 @@ $text-color: #333333;
         margin-bottom: 10px;
       }
 
+      button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: $tertiary-color;
+        background-color: $primary-color;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+
       .rating {
         display: flex;
         align-items: center;

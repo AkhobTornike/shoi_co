@@ -13,6 +13,9 @@ export class ReviewsService {
     return (reviewsData as any).default;
   }
 
+  getReviewForProduct(reviewIds: number[]): Review[] {
+    return (reviewsData as any).default.filter((review: Review) => reviewIds.includes(review.reviewID))
+  }
   
   getReviewsByIds(id: number): Review[] {
     return (reviewsData as any).default.filter((review: Review) => review.reviewID === id)
